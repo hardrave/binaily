@@ -44,4 +44,8 @@ def trash(imagepath):
   }
 
   response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=payload)
-  return response.json()
+
+  response = response.json()  
+  content = response['choices'][0]['message']['content']
+  print(content)
+  return content
