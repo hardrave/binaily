@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BinAily</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        header {
+            font-size: 15vh;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .buttons-container {
+            display: flex;
+            gap: 20px;
+        }
+        .buttons-container a {
+            text-decoration: none;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s;
+            font-size: 2.5vh;
+        }
+        .buttons-container a.youtube {
+            background-color: #333333;
+            width: 9vw;
+        }
+        .buttons-container a.github {
+            background-color: #333333;
+            width: 9vw;
+        }
+        .buttons-container a.documentation {
+            background-color: #333333;
+            width: 9vw;
+        }
+        .buttons-container a:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <header>BinAily</header>
+    <div class="buttons-container">
+        <a href="https://youtube.com" target="_blank" class="youtube">YouTube</a>
+        <a href="https://github.com" target="_blank" class="github">GitHub</a>
+        <a href="https://docs.example.com" target="_blank" class="documentation">Documentation</a>
+    </div>
+</body>
+</html>
