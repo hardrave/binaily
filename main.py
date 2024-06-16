@@ -41,7 +41,7 @@ while True:
         # camera.capture('photos/photo.jpg')
         # camera.stop_preview()
         # Define the bash command
-        command = ["libcamera-jpeg", "-o", "photos/photo.jpg", "--timeout", "3000"]
+        command = ["libcamera-jpeg", "-o", "photos/photo.jpg", "--timeout", "1500"]
     
 
         # Run the command
@@ -50,7 +50,7 @@ while True:
         # Print the output and error (if any)
         print("stdout:", result.stdout)
         print("stderr:", result.stderr)
-        sleep(5)
+        sleep(1)
         trash_type = trash('photos/photo.jpg')
         controller = I2C_Controller(0x40, debug=False)
         controller.setPWMFreq(50)
@@ -63,9 +63,9 @@ while True:
         elif trash_type == 'Glass':
             controller.Set_Pulse(15, 2200) # 240 degrees
             sleep(3)
-        controller.Set_Pulse(11, 2500) # otwieranie 
+        controller.Set_Pulse(11, 2500) # opening 
         sleep(5)
-        controller.Set_Pulse(11, 400) #zamykanie
+        controller.Set_Pulse(11, 400) # closing
             
 
     elif distance > 0.3 and distance <= 0.7:
