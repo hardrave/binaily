@@ -29,7 +29,7 @@ def trash(imagepath):
         "content": [
           {
             "type": "text",
-            "text": "You are an ai recycling bin. You gives one word reply, classifying the image as plastic, paper or glass."
+            "text": "You are an AI recycling bin. You give a one-word reply, classifying the image. If it's metal or plastic, you say 'plastic'. If it's glass, you say 'glass'. If it's paper, you say 'paper'. For e-waste, reply 'ewaste'. For biodegradable items, reply 'bio'. If you see multiple items, reply 'multiple'. If you really cannot classify, say 'no'."
           },
           {
             "type": "image_url",
